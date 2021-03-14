@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('nhap a:'));
+        while(isNaN(a) || !(Number.isInteger(a))){
+            a = Number(prompt('nhap a:'));
+        }
+        let b = Number(prompt('nhap b:'));   
+        while(isNaN(b) || !(Number.isInteger(b))){
+            b = Number(prompt('nhap b:'));
+        }
+        let c = Number(prompt('nhap c:'));
+        while(isNaN(c) || !(Number.isInteger(c))){
+            c = Number(prompt('nhap c:'));
+        }
+        if(a != 0){
+            let Delta = (b*b) - (4*a*c);
+            if(Delta < 0){
+                alert('pt Vo nghiem');
+            }else{
+                if(Delta == 0){
+                    let nK = (-b)/2*a;
+                    alert('pt co nghiem kep: '+nK);
+                }else{
+                    let n1 = ((-b) + sqrt(Delta))/(2*a);
+                    let n2 = ((-b) - sqrt(Delta))/(2*a);
+                    alert('pt co nghiem 1: '+n1);
+                    alert('pt co nghiem 2: '+n2);
+                }
+            }
+        }else{
+            if(b == 0){
+                if(c == 0){
+                    alert('pt Vo so nghiem');
+                }else{
+                    alert('pt Vo nghiem');
+                }
+            }else{
+                let n =(-c)/b;
+                alert('pt co nghiem: '+n); 
+            }
+        }
+            
+</script>
+</body>
+</html>

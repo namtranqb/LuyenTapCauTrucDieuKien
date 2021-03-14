@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('nhap a:'));
+        while(isNaN(a)){
+            a = Number(prompt('nhap a:'));
+        }
+        let b = Number(prompt('nhap b:'));   
+        while(isNaN(b)){
+            b = Number(prompt('nhap b:'));
+        }
+        let c = Number(prompt('nhap c:'));
+        while(isNaN(c)){
+            c = Number(prompt('nhap c:'));
+        }
+        if(a,b,c > 0 && a + b > c && b + c > a && a + c > b)
+        alert(a+','+b+','+c+': la 3 canh cua mot tam giac !');
+        else{
+            alert(a+','+b+','+c+': khong la mot tam giac !');
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh gia dien</title>
+</head>
+<body>
+    <script>
+        let Kwh = parseFloat(prompt('nhap so cong-to-met :'));
+        while(isNaN(Kwh) || Kwh < 0 )
+            Kwh = +prompt('nhap sai !, nhap lai so cong-to-met :');
+        let b1 = 0;
+        let b2 = 0;
+        let b3 = 0;
+        let b4 = 0;
+        let b5 = 0;
+        let b6 = 0;
+        let Total = 0;
+        if(Kwh <= 50){
+            b1 = 1.678 * Kwh;
+            Total = b1;
+        }
+        if(Kwh > 50 && Kwh <=100){
+            b1 = 1.678 *50 -8.400;
+            b2 = (Kwh - 50)*1.734;
+            Total = b1 +b2;
+        }
+        if(Kwh > 100 && Kwh <=200){
+            b1 = 1.678 *50 -8.400;
+            b2 = 1.734 *50 -8.650;
+            b3 = 2.014 *(Kwh - 100);
+            Total = b1 +b2 +b3;
+        }
+        if(Kwh > 200 && Kwh <=300){
+            b1 = 1.678 *50 -8.400;
+            b2 = 1.734 *50 -8.650;
+            b3 = 2.014 *100 -20.100;
+            b4 = 2.536 *(Kwh -200);
+            Total = b1 +b2 +b3 +b4;
+        }
+        if(Kwh > 300 && Kwh <=400){
+            b1 = 1.678 *50 -8.400;
+            b2 = 1.734 *50 -8.650;
+            b3 = 2.014 *100 -20.100;
+            b4 = 2.536 *100 -25.400;
+            b5 = 2.834 *(Kwh -300);
+            Total = b1 +b2 +b3 +b4 +b5;
+        }
+        if(Kwh > 400 ){
+            b1 = 1.678 *50 -8.400;
+            b2 = 1.734 *50 -8.650;
+            b3 = 2.014 *100 -20.100;
+            b4 = 2.536 *100 -25.400;
+            b5 = 2.834 *100;
+            b6 = 2.927 *(Kwh -400);
+            Total = b1 +b2 +b3 +b4 +b5 +b6;
+        }
+        let thanh_toan = (Total + (Total*10/100));
+        alert('tien dien thang nay: '+thanh_toan.toFixed(3) *1000 + ' VND');
+
+    </script>
+</body>
+</html>

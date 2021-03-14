@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b = Number(prompt('nhap b:'));   
+        while(isNaN(b) || !(Number.isInteger(b))){
+            b = Number(prompt('nhap b:'));
+        }
+        let c = Number(prompt('nhap c:'));
+        while(isNaN(c) || !(Number.isInteger(c))){
+            c = Number(prompt('nhap c:'));
+        }
+        let n;
+        if(b == 0){
+                if(c ==0){
+                    alert('pt Vo so nghiem');
+                }else{
+                    alert('pt Vo nghiem');
+                }
+            }else{
+                n = (-c/b);
+                alert('pt co nghiem: '+n); 
+            }
+    </script>
+</body>
+</html>
